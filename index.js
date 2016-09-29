@@ -62,7 +62,7 @@ UpyunStore.prototype.delete = function (target) {
 };
 
 UpyunStore.prototype.getRemotePath = function (image) {
-	var prefix = moment().format(this.options.filePath || 'YYYY/MM/').replace(/^\//, '');
+	var prefix = moment().format(this.options.filePath || 'YYYYMMDDHHmmss/').replace(/^\//, '');
 
 	return '/' + prefix + image.name;
 };
